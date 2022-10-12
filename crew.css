@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#home.active{
+    border-bottom: solid 2px white;
+}
+#dest.active{
+    border-bottom: solid 2px white;
+}
+#crew.active{
+    border-bottom: solid 2px white;
+}
+#tech.active{
+    border-bottom: solid 2px white;
+}
+#dest{
+    border-bottom: solid 2px white;
+}
+body{
+    background-image: url(/starter-code/assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115vh;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+}
+.menu{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.star{
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+}
+.line{
+  display: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    list-style: none;
+    position: absolute;
+    top: -1000%;
+    left: 0;
+    backdrop-filter: blur(30px);
+    transition: 0.6s;
+    text-transform: uppercase;
+    z-index: 999;
+    
+}
+.fa-xmark{
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    color: #D0D6F9;
+    cursor: pointer;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px transparent;
+}
+.navbar li:hover{
+    border-bottom: solid 2px rgb(183, 178, 178);
+}
+.navbar li{
+    margin-top: 40px;
+    height: 30px;
+    border-bottom: solid 2px transparent;
+}
+@media screen and (min-width: 580px){
+    body{
+        background-image: url(/starter-code/assets/destination/background-destination-tablet.jpg);
+        height: 99vh;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(80px);
+        background-color: rgb(24, 29, 52);
+        
+    }
+    nav{
+        width: 70%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .navbar i{
+        display: none;
+    }
+    .navbar li{
+        margin-top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .navbar li a{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 917px){
+    body{
+        background-image: url(/starter-code/assets/destination/background-destination-desktop.jpg);
+        height: 99vh;
+    }
+    .line{
+        display: block;
+        width: 32%;
+        height: 0.2px;
+        background: rgba(255, 255, 255, 0.377);
+        position: absolute;
+        top: 29px;
+        left: 10%;
+        z-index: 9999;
+    }
+    nav{
+        width: 60%;
+        height: 60px;
+    }
+    .navbar{
+        justify-content: flex-start;
+        background-color:  #8999f54c;
+        backdrop-filter: blur(7px);
+    }
+    .navbar li{
+        margin-right: 10px;
+    }
+    .navbar li a{
+        font-size: 10px;
+    }
+    .navbar li a:hover{
+        border-bottom: solid 2px rgba(255, 255, 255, 0.377);
+    }
+    .navbar li:hover{
+        border-bottom: transparent;
+    }
+    .navbar li :first-child{
+        margin-left: 60px;
+    }
+}
+@media screen and (min-width: 1080px){
+    .navbar{
+        width: 80%;
+        left: 20%;
+    }
+    .line{
+        width: 43%;
+    }
+}
