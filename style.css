@@ -3,18 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-#home.active{
-    border-bottom: solid 2px white;
-}
-#dest.active{
-    border-bottom: solid 2px white;
-}
-#crew.active{
-    border-bottom: solid 2px white;
-}
-#tech.active{
-    border-bottom: solid 2px white;
-}
+
 #home{
     border-bottom: solid 2px white;
 }

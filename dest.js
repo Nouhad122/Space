@@ -35,33 +35,6 @@ function myFunction(x){
 
 
   function activeNav(){
-    home.addEventListener('click',()=>{
-        home.classList.toggle('active');
-       dest.classList.remove('active');
-       crew.classList.remove('active');
-       tech.classList.remove('active');
-    });
-    dest.addEventListener('click',()=>{
-      dest.classList.toggle('active');
-      home.classList.remove('active');
-      crew.classList.remove('active');
-      tech.classList.remove('active');
-
-  });
-  crew.addEventListener('click',()=>{
-    crew.classList.toggle('active');
-    home.classList.remove('active');
-    dest.classList.remove('active');
-    tech.classList.remove('active');
-
-});
-tech.addEventListener('click',()=>{
-  tech.classList.toggle('active');
-  home.classList.remove('active');
-  crew.classList.remove('active');
-  dest.classList.remove('active');
-
-});
 moon.addEventListener('click',()=>{
     moon.classList.toggle('active');
     mars.classList.remove('active');

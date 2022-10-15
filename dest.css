@@ -3,18 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-#home.active{
-    border-bottom: solid 2px white;
-}
-#dest.active{
-    border-bottom: solid 2px white;
-}
-#crew.active{
-    border-bottom: solid 2px white;
-}
-#tech.active{
-    border-bottom: solid 2px white;
-}
+
 #dest{
     border-bottom: solid 2px white;
 }
@@ -140,6 +129,7 @@ img{
     font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: white;
 }
 
   .middle2 ul{
@@ -169,6 +159,7 @@ img{
     text-transform: uppercase;
     font-weight: 1;
     margin-top: 15px;
+    color: white;
 }
   .middle2 .parag{
     width: clamp(280px,100%,490px);
@@ -287,7 +278,7 @@ img{
 @media screen and (min-width: 917px){
     body{
         background-image: url(/starter-code/assets/destination/background-destination-desktop.jpg);
-        height: 99vh;
+        height: 97vh;
     }
     .line{
         display: block;
@@ -385,5 +376,8 @@ img{
     }
     .line{
         width: 43%;
+    }
+    body{
+        height: 97vh;
     }
 }

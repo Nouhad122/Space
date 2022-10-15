@@ -3,27 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-#home.active{
-    border-bottom: solid 2px white;
-}
-#dest.active{
-    border-bottom: solid 2px white;
-}
-#crew.active{
-    border-bottom: solid 2px white;
-}
-#tech.active{
-    border-bottom: solid 2px white;
-}
-#dest{
+#crew{
     border-bottom: solid 2px white;
 }
 body{
-    background-image: url(/starter-code/assets/destination/background-destination-mobile.jpg);
+    background-image: url(/starter-code/assets/crew/background-crew-mobile.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 115vh;
+    height: 96vh;
+    color: white;
 }
 header{
     display: flex;
@@ -95,10 +84,108 @@ nav{
     height: 30px;
     border-bottom: solid 2px transparent;
 }
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    word-spacing: 1px;
+}
+.title span{
+    color:rgba(255, 255, 255, 0.377);
+    margin-right: 7px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.all3{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.middle3{
+    display: flex;
+    justify-content: center;
+}
+.image{
+    height:240px;
+    width: 90%;
+    border-bottom: solid 1px  rgb(183, 178, 178);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+img{
+    width: clamp(110px,100%,160px);
+    height: 100%;
+}
+.points{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.points2{
+    display: none;
+}
+.point{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background:rgba(255, 255, 255, 0.377);
+    margin-right: 14px;
+    cursor: pointer;
+}
+.point:hover{
+    background: rgb(190, 188, 188);
+}
+#first-point.active,#second-point.active,#third-point.active,#fourth-point.active{
+    background: white;
+}
+
+.commander .job{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    letter-spacing: 1px;
+    color:rgb(146, 144, 144);
+    font-weight: 500;
+}
+
+.commander h1{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 10;
+    letter-spacing: 1px;
+    position: relative;
+    left: 0;
+    top: 5px;
+    text-align: center;
+    padding: 5px;
+}
+.commander{
+    position: relative;
+    top: 20px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.douglas{
+    position: relative;
+    top: 13px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    color:#D0D6F9;
+    font-size: 19px;
+    width: clamp(280px,100%,330px);
+}
 @media screen and (min-width: 580px){
     body{
-        background-image: url(/starter-code/assets/destination/background-destination-tablet.jpg);
-        height: 99vh;
+        background-image: url(/starter-code/assets/crew/background-crew-tablet.jpg);
+        height: 96vh;
     }
     .menu{
         display: none;
@@ -135,11 +222,52 @@ nav{
     .navbar li a{
         font-size: 13px;
     }
+
+    .image{
+        height:305px;
+        width: 550px;
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+    img{
+        width: 42%;
+        height: 100%;
+    }
+    .all3{
+        flex-direction: column;
+        height: 82vh;
+    }
+    .points{
+        position: absolute;
+        top: 300px;
+        left: 0;
+        z-index: 999;
+    }
+    .title{
+        justify-content: flex-start;
+        margin-top: 30px;
+        margin-left: 3%;
+        font-size: 20px;
+    }
+    .commander .job{
+        font-size: 17px;
+    }
+    .commander h1{
+        top: 0;
+    }
+    .douglas{
+        top: 0;
+      width: 390px;
+      font-size: 18px;
+    }
+
 }
 @media screen and (min-width: 917px){
     body{
-        background-image: url(/starter-code/assets/destination/background-destination-desktop.jpg);
-        height: 99vh;
+        background-image: url(/starter-code/assets/crew/background-crew-desktop.jpg);
+        height: 98vh;
     }
     .line{
         display: block;
@@ -175,6 +303,72 @@ nav{
     .navbar li :first-child{
         margin-left: 60px;
     }
+    .all3{
+      flex-direction: row;
+      height: 88.5vh;
+      justify-content: space-evenly;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .image{
+        height: 92%;
+        width: 420px;
+        margin-top: 50px;
+    }
+    img{
+        width: 80%;
+    }
+    .commander{
+        justify-content: flex-start;
+        height: 96%;
+        position: relative;
+        top: 23px;
+        left: 0;
+        width: 494px;
+    }
+    .commander .job{
+        justify-content: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 200px;
+        left: 68px;
+        font-size: 20px;
+    }
+    .commander h1{
+        justify-content: flex-start;
+        width: 100%;
+        text-align: start;
+        position: absolute;
+        top: 220px;
+        left: 62px;
+        font-size: 32px;
+    }
+    .douglas{
+        text-align: start;
+        position: absolute;
+        top: 280px;
+        left: 68px;
+        font-size: 21px;
+    }
+    .head3{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .points{
+     position: absolute;
+     top: 520px;
+     width: 100px;
+     left: 75px;
+    }
+    .title{
+        position: absolute;
+        top: 80px;
+        left: 6%;
+        z-index: 999;
+    }
+
 }
 @media screen and (min-width: 1080px){
     .navbar{
@@ -183,5 +377,11 @@ nav{
     }
     .line{
         width: 43%;
+    }
+    body{
+        height: 97vh;
+    }
+    .title{
+        left: 10%;
     }
 }
